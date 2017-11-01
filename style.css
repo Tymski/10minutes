@@ -7,19 +7,23 @@ html,
 body {
     height: 100%;
     background-color: black;
+    margin: 0;
 }
 
 .flex-container {
     height: 100%;
     padding: 0;
     margin: 0;
-    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#timer {
+.timer {
     background-color: #123;
     display: flex;
     align-items: center;
@@ -37,11 +41,13 @@ body {
     text-decoration: underline dashed rgba(255, 255, 255, 0.0);
 }
 
-
-/* bigger */
+.column {
+    width: 100%;
+}
 
 @media (min-width: 800px) {
-    #timer {
+    /* BIG */
+    .timer {
         border: 7px solid rgb(75, 73, 73);
         font-size: 10em;
         padding: 30px;
@@ -49,11 +55,9 @@ body {
     }
 }
 
-
-/* tiny */
-
 @media (max-width: 450px) {
-    #timer {
+    /* TINY */
+    .timer {
         font-size: 4em;
         padding: 10px 0px;
         margin: 0px;
@@ -62,7 +66,7 @@ body {
     }
 }
 
-#timer:focus {
+.timer:focus {
     border-color: rgb(36, 36, 75);
     background-color: rgb(17, 23, 51);
     text-decoration: underline dashed rgba(255, 255, 255, 0.4);

@@ -7,8 +7,6 @@ function removeSecond() {
         input.shift();
         timerTitle = input.join(" ");
     }
-    // δ = performance.now();
-
     [h, m, s] = timer.value.split(":");
     if (typeof m === 'undefined') {
         s = h;
@@ -29,18 +27,8 @@ function removeSecond() {
     timer.value = [leftPad(m, 2), leftPad(s, 2)].join(":");
     if (h > 0) timer.value = leftPad(h, 2) + ":" + timer.value;
     document.title = timer.value + " " + timerTitle;
-    // δ = performance.now()-δ;
     return m * 60 + s;
 }
-
-// function timerFunction(){
-//     if(removeSecond()>0){
-//         setTimeout(function() {
-//             timerFunction();
-//         }, 1000);
-//     }
-// }
-// timerFunction();
 
 timerInterval = setInterval(removeSecond, 1000);
 
@@ -55,3 +43,12 @@ timer.addEventListener('blur', function () {
 timer.addEventListener('keypress', function (keypress) {
     if(keypress.key=="Enter")timer.blur();
 });
+
+// function timerFunction(){
+//     if(removeSecond()>0){
+//         setTimeout(function() {
+//             timerFunction();
+//         }, 1000);
+//     }
+// }
+// timerFunction();
