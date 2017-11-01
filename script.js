@@ -1,10 +1,19 @@
+timerTitle = "";
+
 function removeSecond() {
-    δ = performance.now();
+    let input = timer.value.split(" ");
+    if (input.length > 1) {
+        timer.value = input[0];
+        input.shift();
+        timerTitle = input.join(" ");
+    }
+    // δ = performance.now();
+
     [h, m, s] = timer.value.split(":");
     if (typeof m === 'undefined') {
-        s=h;
-        h=0;
-        m=0;
+        s = h;
+        h = 0;
+        m = 0;
     }
     if (typeof s === 'undefined') {
         [m, s] = [h, m];
@@ -19,8 +28,8 @@ function removeSecond() {
     s -= m * 60 + h * 3600;
     timer.value = [leftPad(m, 2), leftPad(s, 2)].join(":");
     if (h > 0) timer.value = leftPad(h, 2) + ":" + timer.value;
-    document.title = timer.value;
-    δ = performance.now()-δ;
+    document.title = timer.value + " " + timerTitle;
+    // δ = performance.now()-δ;
     return m * 60 + s;
 }
 
