@@ -51,3 +51,7 @@ timer.addEventListener('focus', function () {
 timer.addEventListener('blur', function () {
     timerInterval = setInterval(removeSecond, 1000);
 });
+
+timer.addEventListener('keypress', function (keypress) {
+    if(keypress.key=="Enter")timer.blur();
+});

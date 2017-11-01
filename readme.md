@@ -18,7 +18,6 @@ Write how long your timer should be, for example
 
 ## [TODO]
 
-* Use Enter key
 * Service worker
 * Timer's title on the page
 * Changing icon
