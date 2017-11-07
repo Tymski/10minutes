@@ -16,9 +16,13 @@ Write how long your timer should be, for example
 * __1:00:00__ - one hour
 * __1::__ - one hour (you can omit zeros)
 
+You can also provide a title for the timer, like so:
+
+* __10:00 Eggs__ - Timer with Eggs as a title
+* __1:30:00 Laundry__ - Timer with Laundry as a title
+
 ## [TODO]
 
 * Service worker
-* Timer's title on the page
 * Changing icon
 * User guide

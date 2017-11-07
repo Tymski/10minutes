@@ -5,3 +5,8 @@ function leftPad(number, padLength) {
     }
     return number;
 }
+
+function css( element, property ) {
+    return window.getComputedStyle( element, null ).getPropertyValue( property );
+}
+

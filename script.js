@@ -6,6 +6,10 @@ function removeSecond() {
         timer.value = input[0];
         input.shift();
         timerTitle = input.join(" ");
+        if (timerTitle.length > 0) {
+            timerTitleInput.value = timerTitle;
+            timerTitleInput.classList.remove("hidden");
+        }
     }
     [h, m, s] = timer.value.split(":");
     if (typeof m === 'undefined') {
@@ -41,7 +45,18 @@ timer.addEventListener('blur', function () {
 });
 
 timer.addEventListener('keypress', function (keypress) {
-    if(keypress.key=="Enter")timer.blur();
+    if (keypress.key == "Enter") timer.blur();
+});
+
+timerTitleInput.addEventListener('blur', function () {
+    timerTitle = timerTitleInput.value;
+    if (timerTitle === ''){
+        timerTitleInput.classList.add("hidden");
+    }
+});
+    
+timerTitleInput.addEventListener('keypress', function (keypress) {
+    if (keypress.key == "Enter") timerTitleInput.blur();
 });
 
 // function timerFunction(){
@@ -52,3 +67,5 @@ timer.addEventListener('keypress', function (keypress) {
 //     }
 // }
 // timerFunction();
+
+// timerTitleInput
