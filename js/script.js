@@ -1,6 +1,9 @@
 timerTitle = "";
+canPlaySample = true;
+sample = new Audio('alarm.mp3');
 
 function removeSecond() {
+    let inputValue = timer.value;
     let input = timer.value.split(" ");
     if (input.length > 1) {
         timer.value = input[0];
@@ -31,6 +34,11 @@ function removeSecond() {
     timer.value = [leftPad(m, 2), leftPad(s, 2)].join(":");
     if (h > 0) timer.value = leftPad(h, 2) + ":" + timer.value;
     document.title = timer.value + " " + timerTitle;
+    if(timer.value != inputValue)canPlaySample = true;
+    if (canPlaySample && playSoundCheckbox.checked && timer.value == "00:00"){
+        canPlaySample = false;
+        sample.play();
+    }
     return m * 60 + s;
 }
 
