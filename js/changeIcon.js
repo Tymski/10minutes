@@ -20,5 +20,5 @@
     path += imageNames[index];
     link.href = path;
     document.getElementsByTagName('head')[0].appendChild(link);
-    console.log(link);
+    // console.log(link);
 })();

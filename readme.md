@@ -9,7 +9,7 @@ Check it out: [tymski.github.io/10minutes](https://tymski.github.io/10minutes/)
 
 ## Usage
 
-Write how long your timer should be, for example
+Write how long your timer should be, for example:
 
 * __20:00__ - 20 minutes
 * __20:__ - 20 minutes (you can omit zeros)
@@ -20,6 +20,9 @@ You can also provide a title for the timer, like so:
 
 * __10:00 Eggs__ - Timer with Eggs as a title
 * __1:30:00 Laundry__ - Timer with Laundry as a title
+
+You can use GET parameters *time* and *title* like this:
+[tymski.github.io/10minutes?time=1:30:00&title=Laundry](https://tymski.github.io/10minutes/?time=1:30:00&title=Laundry)
 
 ## [TODO]
 
