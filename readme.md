@@ -21,8 +21,9 @@ You can also provide a title for the timer, like so:
 * __10:00 Eggs__ - Timer with Eggs as a title
 * __1:30:00 Laundry__ - Timer with Laundry as a title
 
-You can use GET parameters *time* and *title* like this:
-[tymski.github.io/10minutes?time=1:30:00&title=Laundry](https://tymski.github.io/10minutes/?time=1:30:00&title=Laundry)
+You can use GET parameters *time* and *title* like this:  
+* [tymski.github.io/10minutes?time=1:30:00&title=Laundry](https://tymski.github.io/10minutes/?time=1:30:00&title=Laundry)  
+* [tymski.github.io/10minutes?time=0:10:00&title=Eggs](https://tymski.github.io/10minutes/?time=0:10:00&title=Eggs)
 
 ## [TODO]
 
