@@ -9,6 +9,15 @@
     <link href="css/style.css" rel="stylesheet">
     <meta name="theme-color" content="black">
     <meta name="author" content="Tymski">
+    <meta name="Description" content="10 minutes - Timer that works Online and Offline.">
+    <link rel="manifest" href="/manifest.json">
+    <link rel='canonical' href='https://tymski.github.io/10minutes'>
+    <meta name='mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='application-name' content='10 Minutes'>
+    <meta name='apple-mobile-web-app-status-bar-style' content='black'>
+    <meta name='apple-mobile-web-app-title' content='10 minutes'>
+    <meta name="msapplication-TileColor" content="black">
     <!-- <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
@@ -23,7 +32,6 @@
     <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#000000">
     <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png"> -->
 </head>
 
@@ -38,10 +46,19 @@
         <input id="playSoundCheckbox" type="checkbox" checked="checked">
         <span class="checkmark"></span>
     </label>
+    <script src="js/utils.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/changeIcon.js"></script>
+    <script>
+        if('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker
+                    .register('/serviceWorker.js')
+                    .then(function() { console.log("ServiceWorker registered"); })
+                    .catch(function(e){ console.log("Cannot register ServiceWorker."); });
+            });
+        }
+    </script>
 </body>
 
 </html>
-
-<script src="js/utils.js"></script>
-<script src="js/script.js"></script>
-<script src="js/changeIcon.js"></script>

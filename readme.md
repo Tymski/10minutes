@@ -1,11 +1,8 @@
-# Online Timer
+# Timer
 
-Check it out: [tymski.github.io/10minutes](https://tymski.github.io/10minutes/)
+This is a Timer with 10 minutes as default value. Type in the text field your desired timer duration and press Enter.
 
-## Basic info
-
-* **Tech:** HTML + CSS + JS
-* **Goal:** create simplistic, functional, good looking online timer
+Timer is available here: [tymski.github.io/10minutes](https://tymski.github.io/10minutes/)
 
 ## Usage
 
@@ -25,8 +22,19 @@ You can use GET parameters *time* and *title* like this:
 * [tymski.github.io/10minutes?time=1:30:00&title=Laundry](https://tymski.github.io/10minutes/?time=1:30:00&title=Laundry)  
 * [tymski.github.io/10minutes?time=0:10:00&title=Eggs](https://tymski.github.io/10minutes/?time=0:10:00&title=Eggs)
 
-## [TODO]
+## Installation
 
-* Service worker
-* Changing icon
-* User guide
+It can be installed and work offline like any Progressive Web App.  
+For example, on Android click the three dot menu on top right and choose "Add To Home Screen" option.
+
+## Basic meta info
+
+* **Technology:** HTML + CSS + JS + PWA
+* **Goal:** create simplistic, functional, good looking online timer
+* **Address:** [tymski.github.io/10minutes](https://tymski.github.io/10minutes/)
+
+## TODO
+
+* **Icons:** for all platforms and sizes - svg?
+* **ServiceWorker:** add prefetching and removing old caches
+* Add h m s support like: 1h 30m, 2h40m
