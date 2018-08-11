@@ -2,7 +2,9 @@
 
 This is a Timer with 10 minutes as default value. Type in the text field your desired timer duration and press Enter.
 
-Timer is available here: [tymski.github.io/10minutes](https://tymski.github.io/10minutes/)
+Timer is available here: [tymski.github.io/10minutes](https://tymski.github.io/10minutes/)  
+  
+![10 minutes screenshot](media/screenshot.png)
 
 ## Usage
 
@@ -21,6 +23,14 @@ You can also provide a title for the timer, like so:
 You can use GET parameters *time* and *title* like this:  
 * [tymski.github.io/10minutes?time=1:30:00&title=Laundry](https://tymski.github.io/10minutes/?time=1:30:00&title=Laundry)  
 * [tymski.github.io/10minutes?time=0:10:00&title=Eggs](https://tymski.github.io/10minutes/?time=0:10:00&title=Eggs)
+
+## Additional features
+
+* Style changes when you resize to smaller window. 
+* Window title shows timer.
+* Can be used offline thanks to Service Worker caching.
+
+![Small window screenshot](media/screenshot_popup.png)
 
 ## Installation
 
