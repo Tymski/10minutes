@@ -1,8 +1,8 @@
-const VERSION = "v2";
+const CACHE_NAME = "10minutes_v3";
 
 self.addEventListener('install', function (e) {
     e.waitUntil(
-        caches.open(VERSION).then(function (cache) {
+        caches.open(CACHE_NAME).then(function (cache) {
             return cache.addAll([
                 '/',
                 'index.html',
@@ -25,19 +25,22 @@ self.addEventListener('install', function (e) {
                 'media/icons/icon8-192x192.png',
 
                 'media/alarm.mp3'
-            ]);
+            ])
+                .then(() => self.skipWaiting());
         })
     );
 });
 
 self.addEventListener('activate', event => {
     event.waitUntil(self.clients.claim());
-  });
+});
 
-self.addEventListener('fetch', function (event) {
+self.addEventListener('fetch', event => {
     event.respondWith(
-        caches.match(event.request).then(function (response) {
-            return response || fetch(event.request);
-        })
+        caches.open(CACHE_NAME)
+            .then(cache => cache.match(event.request, { ignoreSearch: true }))
+            .then(response => {
+                return response || fetch(event.request);
+            })
     );
 });
