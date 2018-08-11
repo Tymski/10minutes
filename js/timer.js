@@ -2,7 +2,7 @@ getParamsMap = new Map(window.location.search.substring(1).replace("%20"," ").sp
 
 timerTitle = '';
 canPlaySample = true;
-sample = new Audio('alarm.mp3');
+sample = new Audio('media/alarm.mp3');
 
 let value = (getParamsMap.get("time") || timer.value) + " " + (getParamsMap.get("title") || "");
 timer.value = value;
