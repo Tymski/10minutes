@@ -1,9 +1,10 @@
-const CACHE_NAME = "10minutes_v3";
+const CACHE_NAME = "10minutes_v4";
 
 self.addEventListener('install', function (e) {
     e.waitUntil(
         caches.open(CACHE_NAME).then(function (cache) {
             return cache.addAll([
+                '.',
                 '/',
                 './',
                 'index.html',
