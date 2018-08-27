@@ -49,3 +49,4 @@ For example, on Android click the three dot menu on top right and choose "Add To
 * **ServiceWorker:** add prefetching and removing old caches
 * Add h m s support like: 1h 30m, 2h40m
 * Reduce content-blocking css (Audit)
+* Add different sizes for the random icons?

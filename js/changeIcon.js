@@ -1,5 +1,5 @@
 (function () {
-    var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    var link = icon || document.querySelector("link[rel*='icon']") || document.createElement('link');
     link.type = 'image/x-icon';
     link.type = 'image/png';
     link.rel = 'shortcut icon';
