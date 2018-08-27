@@ -4,7 +4,7 @@
     link.type = 'image/png';
     link.rel = 'shortcut icon';
     link.rel = 'icon';
-    let path = '/media/icons/';
+    let path = './media/icons/';
     let imageNames = [
         'icon-192x192.png',
         'icon1-192x192.png',

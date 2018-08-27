@@ -48,3 +48,4 @@ For example, on Android click the three dot menu on top right and choose "Add To
 * **Icons:** for all platforms and sizes - svg?
 * **ServiceWorker:** add prefetching and removing old caches
 * Add h m s support like: 1h 30m, 2h40m
+* Reduce content-blocking css (Audit)
