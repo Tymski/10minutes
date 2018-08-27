@@ -14,7 +14,6 @@ self.addEventListener('install', function (e) {
                 'js/timer.js',
                 'js/changeIcon.js',
 
-                'css/checkbox.css',
                 'css/style.css',
 
                 'media/icons/icon-192x192.png',

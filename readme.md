@@ -21,6 +21,7 @@ You can also provide a title for the timer, like so:
 * __1:30:00 Laundry__ - Timer with Laundry as a title
 
 You can use GET parameters *time* and *title* like this:  
+
 * [tymski.github.io/10minutes?time=1:30:00&title=Laundry](https://tymski.github.io/10minutes/?time=1:30:00&title=Laundry)  
 * [tymski.github.io/10minutes?time=0:10:00&title=Eggs](https://tymski.github.io/10minutes/?time=0:10:00&title=Eggs)
 
@@ -50,3 +51,5 @@ For example, on Android click the three dot menu on top right and choose "Add To
 * Add h m s support like: 1h 30m, 2h40m
 * Reduce content-blocking css (Audit)
 * Add different sizes for the random icons?
+* Add JS and CSS bundling
+* Countdown's value shouldn't be dependent on how many times interval is executed
